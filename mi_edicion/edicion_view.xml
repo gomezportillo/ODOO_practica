@@ -1,14 +1,14 @@
-<record model="ir.ui.view" id="view_product_template_form">
+<record model="ir.ui.view" id="view_product_template_form"> <!--el id ta bien?-->
     <field name="name">product.tempalte.form</field>
     <field name="model">product.template</field>
     <field name="inherit_id" ref="product.template"/>
     <field name="type">form</field>
     <field name="arch" type="xml">
-        <field name="name1" position="after">
+        <field name="sale_ok" position="after">
         		<field name="is_course" select="0"/>
         </field>
-				<field name="name2" position="after">
-        		<field name="profesores" select="0"/>
+				<field name="company_id" position="after">
+        		<field name="profesor" select="0"/>
         </field>
     </field>
 </record>
