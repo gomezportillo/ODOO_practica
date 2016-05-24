@@ -12,8 +12,8 @@ class curso(orm.Model):
 	_description = "Lista de cursos"
 	_columns = {
 		'nombre' : fields.char('Nombre', size=50, required=True),
-		'edicion'  : fields.many2many('product.product', "Ediciones"), #domain="[{'is_course','=','True'}]"), #, {'curso', '=', str(self.curso)}
-		'profesor' : fields.many2many('hr.employee', "Profesor"), #todos los profesores que impartan clase a ediciones de ese curso?
+		'edicion'  : fields.many2one('product.product', "Ediciones", domain=[('is_course','=', True)]) #, {'curso', '=', str(self.curso)}
+		#'profesor' : fields.many2one('hr.employee', "Profesor") #todos los profesores que impartan clase a ediciones de ese curso?
 	}
 
 	#_sql_constraints = [

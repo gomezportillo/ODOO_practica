@@ -2,7 +2,7 @@
 
 {
     "name" : "Gestión de cursos",
-    "version" : "2.1",
+    "version" : "2.3",
     "author" : "Pedro Manuel Gómez-Portillo & José Antonio Martínez",
     "category" : "Generic Modules/Others",
     "website" : "https://github.com/gomezportillo/odoo_practica",

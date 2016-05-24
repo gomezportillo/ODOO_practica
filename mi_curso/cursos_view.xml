@@ -10,10 +10,8 @@
 			<field name="arch" type="xml">
 				<search string="Buscar curso">
 					<group col='4' colspan='2'>
-						<field name="nombre" select="1"/>
-						<field name="edicion" select="1"/>
-						<field name="profesor" select="1"/>
-						<field name="fecha" select="1"/>
+						<field name="nombre" select="0"/>
+						<field name="edicion" select="0"/>
 					</group>
 				</search>
 			</field>
@@ -29,8 +27,6 @@
 					<group col='4' colspan='2'>
 						<field name="nombre" />
 						<field name="edicion" />
-						<field name="profesor" />
-						<field name="fecha" />
 					</group>
 				</form>
 			</field>
@@ -44,8 +40,6 @@
 				<tree string="Cursos">
 					<field name="nombre" />
 					<field name="edicion" />
-					<field name="profesor" />
-					<field name="fecha" />
 				</tree>
 			</field>
 		</record>
