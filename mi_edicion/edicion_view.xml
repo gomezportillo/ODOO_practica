@@ -1,14 +1,20 @@
-<record model="ir.ui.view" id="view_product_template_form"> <!--el id ta bien?-->
-    <field name="name">product.tempalte.form</field>
-    <field name="model">product.template</field>
-    <field name="inherit_id" ref="product.template"/>
-    <field name="type">form</field>
-    <field name="arch" type="xml">
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+  <data>
+    <record model="ir.ui.view" id="product_template_form_view_inherited">
+      <field name="name">product.product.form.inherit</field>
+      <field name="model">product.product</field>
+      <field name="inherit_id" ref="product.product_normal_form_view"/>
+      <!--field name="inherit_id" ref="product_template_only_form_view"/-->
+      <field name="type">form</field>
+      <field name="arch" type="xml">
         <field name="sale_ok" position="after">
-        		<field name="is_course" select="0"/>
+          <field name="is_course" select="0"/>
         </field>
-				<field name="company_id" position="after">
-        		<field name="profesor" select="0"/>
+        <field name="company_id" position="after">
+          <field name="profesor" select="0"/>
         </field>
-    </field>
-</record>
+      </field>
+    </record>
+  </data>
+</openerp>

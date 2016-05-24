@@ -5,7 +5,7 @@
     "version" : "2.1",
     "author" : "Pedro Manuel Gómez-Portillo & José Antonio Martínez",
     "category" : "Generic Modules/Others",
-    "website" : "http://www.github.com/gomezportillo",
+    "website" : "https://github.com/gomezportillo/odoo_practica",
     "description": "Módulo para la gestión de cursos",
     "depends" : ["base"],
     "update_xml" : ["cursos_view.xml"],
