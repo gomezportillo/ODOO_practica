@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 from openerp.osv import fields, orm
-
-
 from types import *
 
 """ CLASE CURSO """
@@ -12,12 +10,6 @@ class curso(orm.Model):
 	_description = "Lista de cursos"
 	_columns = {
 		'nombre' : fields.char('Nombre', size=50, required=True),
-		'edicion'  : fields.many2one('product.product', "Ediciones", domain=[('is_course','=', True)]) #, {'curso', '=', str(self.curso)}
-		#'profesor' : fields.many2one('hr.employee', "Profesor") #todos los profesores que impartan clase a ediciones de ese curso?
+		'edicion': fields.many2many('product.template', 'curso_edicion','nombre','numero_edicion', 'is_course', domain=[('is_course','=',True)]),
+		'precio': fields.char('Precio'),
 	}
-
-	#_sql_constraints = [
-	#	('nombre_unique', 'unique(nombre)', 'El nombre debe ser único'),
-	#]
-
-curso()

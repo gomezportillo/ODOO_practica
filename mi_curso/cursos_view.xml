@@ -2,63 +2,62 @@
 <openerp>
 	<data>
 		<!-- PARTE 1: SECCIÓN CON LAS VISTAS -->
-		<!-- Declaración del filtro de búsqueda -->
-		<record id="curso_filter" model="ir.ui.view">
-			<field name="name">curso.select</field>
-			<field name="model">res.curso</field>
-			<field name="type">search</field>
-			<field name="arch" type="xml">
-				<search string="Buscar curso">
-					<group col='4' colspan='2'>
-						<field name="nombre" select="0"/>
-						<field name="edicion" select="0"/>
-					</group>
-				</search>
-			</field>
-		</record>
-
+		
 		<!-- Declaración del formulario -->
 		<record model="ir.ui.view" id="curso_form">
-			<field name="name">curso</field>
+			<field name="name">res.curso.form</field>
 			<field name="model">res.curso</field>
 			<field name="type">form</field>
 			<field name="arch" type="xml">
 				<form string="Cursos">
-					<group col='4' colspan='2'>
-						<field name="nombre" />
-						<field name="edicion" />
-					</group>
-				</form>
-			</field>
-		</record>
-		<!-- Declaración de la vista de árbol-->
-		<record model="ir.ui.view" id="curso_tree">
-			<field name="name">curso</field>
-			<field name="model">res.curso</field>
-			<field name="type">tree</field>
-			<field name="arch" type="xml">
-				<tree string="Cursos">
+					<!--group col='4' colspan='2'>
 					<field name="nombre" />
 					<field name="edicion" />
-				</tree>
-			</field>
-		</record>
-		<!-- FIN PARTE 1 -->
+				</group-->
+				<div>
+					<label for="nombre" string="Nombre"/>
+					<field name="nombre"/>
+				</div>
+				<div>
+					<label for="edicion" string="Ediciones"/>
+					<field name="edicion"/>
+				</div>
+				<div>
+					<label for="precio" string="Precio"/>
+					<field name="precio"/>
+				</div>
+			</form>
+		</field>
+	</record>
+	<!-- Declaración de la vista de árbol-->
+	<record model="ir.ui.view" id="curso_tree">
+		<field name="name">res.curso.tree</field>
+		<field name="model">res.curso</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Cursos">
+				<field name="nombre"/>
+				<field name="edicion"/>
+				<field name="precio"/>
+			</tree>
+		</field>
+	</record>
+	<!-- FIN PARTE 1 -->
 
-		<!-- PARTE 2: ACCIONES -->
-		<record model="ir.actions.act_window" id="action_curso">
-			<field name="name">curso.action</field>
-			<field name="res_model">res.curso</field>
-			<field name="view_type">form</field>
-			<field name="view_mode">tree,form</field>
-		</record>
-		<!-- FIN PARTE 2 -->
+	<!-- PARTE 2: ACCIONES -->
+	<record model="ir.actions.act_window" id="action_curso">
+		<field name="name">curso.action</field>
+		<field name="res_model">res.curso</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<!-- FIN PARTE 2 -->
 
-		<!-- PARTE 3: MENÚ -->
-		<menuitem id="menu_cursos_main" name="Cursos"/>
-		<menuitem id="menu_cursos_gestion" parent="menu_cursos_main" name="Gestionar cursos"/>
-		<menuitem id="menu_cursoss_perfiles" parent="menu_cursos_gestion" name="Lista de cursos" action="action_curso"/>
-		<!-- FIN PARTE 3 -->
+	<!-- PARTE 3: MENÚ -->
+	<menuitem id="menu_cursos_main" name="Cursos"/>
+	<menuitem id="menu_cursos_gestion" parent="menu_cursos_main" name="Gestionar cursos"/>
+	<menuitem id="menu_cursoss_perfiles" parent="menu_cursos_gestion" name="Lista de cursos" action="action_curso"/>
+	<!-- FIN PARTE 3 -->
 
-	</data>
+</data>
 </openerp>
