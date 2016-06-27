@@ -6,8 +6,11 @@
       <field name="inherit_id" ref="product.product_template_form_view"/>
       <field name="arch" type="xml">
         <field name="company_id" position="after">
-          <field name="is_course"/>
-          <field name="cursos"/>
+          <field name="is_course"></field>
+          <field name="profesor"></field>
+          <field name="cursos"></field>
+          <field name="fecha_in"></field>
+          <field name="fecha_fin"></field>
         </field>
       </field>
     </record>

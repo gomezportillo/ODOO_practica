@@ -1,6 +1,6 @@
 {
     "name" : "Gestión de ediciones",
-    "version" : "2.2",
+    "version" : "2.6",
     "author" : "Pedro Manuel Gómez-Portillo & José Antonio Martínez",
     "category" : "Generic Modules/Others",
     "website" : "http://www.github.com/gomezportillo/odoo_practica",
