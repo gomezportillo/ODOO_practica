@@ -11,5 +11,7 @@ class curso(orm.Model):
 	_columns = {
 		'nombre' : fields.char('Nombre', size=50, required=True),
 		'edicion': fields.many2many('product.template', 'curso_edicion','nombre','numero_edicion', 'is_course', domain=[('is_course','=',True)]),
-		'precio': fields.char('Precio'),
+#		'precio': fields.char('Precio'),
 	}
+
+curso()

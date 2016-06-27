@@ -2,7 +2,7 @@
 <openerp>
 	<data>
 		<!-- PARTE 1: SECCIÓN CON LAS VISTAS -->
-		
+
 		<!-- Declaración del formulario -->
 		<record model="ir.ui.view" id="curso_form">
 			<field name="name">res.curso.form</field>
@@ -22,10 +22,10 @@
 					<label for="edicion" string="Ediciones"/>
 					<field name="edicion"/>
 				</div>
-				<div>
+				<!--div>
 					<label for="precio" string="Precio"/>
 					<field name="precio"/>
-				</div>
+				</div-->
 			</form>
 		</field>
 	</record>
@@ -38,7 +38,7 @@
 			<tree string="Cursos">
 				<field name="nombre"/>
 				<field name="edicion"/>
-				<field name="precio"/>
+				<!--ield name="precio"/-->
 			</tree>
 		</field>
 	</record>
