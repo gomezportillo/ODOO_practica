@@ -10,10 +10,6 @@
 			<field name="type">form</field>
 			<field name="arch" type="xml">
 				<form string="Cursos">
-					<!--group col='4' colspan='2'>
-					<field name="nombre" />
-					<field name="edicion" />
-				</group-->
 				<div>
 					<label for="nombre" string="Nombre"/>
 					<field name="nombre"/>
@@ -22,10 +18,6 @@
 					<label for="edicion" string="Ediciones"/>
 					<field name="edicion"/>
 				</div>
-				<!--div>
-					<label for="precio" string="Precio"/>
-					<field name="precio"/>
-				</div-->
 			</form>
 		</field>
 	</record>
@@ -38,7 +30,6 @@
 			<tree string="Cursos">
 				<field name="nombre"/>
 				<field name="edicion"/>
-				<!--ield name="precio"/-->
 			</tree>
 		</field>
 	</record>
@@ -46,7 +37,7 @@
 
 	<!-- PARTE 2: ACCIONES -->
 	<record model="ir.actions.act_window" id="action_curso">
-		<field name="name">curso.action</field>
+		<field name="name">Cursos</field>
 		<field name="res_model">res.curso</field>
 		<field name="view_type">form</field>
 		<field name="view_mode">tree,form</field>
