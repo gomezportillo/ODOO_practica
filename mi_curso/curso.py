@@ -14,5 +14,3 @@ class curso(orm.Model):
 	}
 
 	_sql_constraints = [('nombre_unique', 'UNIQUE(nombre)', "No puede haber dos cursos con el mismo nombre")]
-
-curso()

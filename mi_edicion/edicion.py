@@ -8,7 +8,7 @@ class edicion(orm.Model):
   _description = "Ediciones de cursos"
   _columns = {
     "is_course": fields.boolean("Es edicion"),
-    "profesor" : fields.many2one('hr.employee', "Profesor"),
+    "profesor" : fields.many2one('hr.employee', "Profesor", domain=[('job_id', '=', 'Profesor')]),
     "cursos"   : fields.many2one("res.curso", "Curso de la edicion"),
     "fecha_in" : fields.date('Fecha inicio'),
 	"fecha_fin": fields.date('Fecha fin'),
