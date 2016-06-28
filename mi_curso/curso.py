@@ -2,8 +2,6 @@
 from openerp.osv import fields, orm
 from types import *
 
-""" CLASE CURSO """
-
 class curso(orm.Model):
 
 	_name = "res.curso"

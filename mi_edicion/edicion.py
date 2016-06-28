@@ -3,7 +3,6 @@ from openerp.osv import fields, orm
 
 class edicion(orm.Model):
 
-  #  _name = "res.edicion"
   _inherit = "product.template"
   _description = "Ediciones de cursos"
   _columns = {

@@ -1,0 +1,21 @@
+<openerp>
+  <data>
+    <record id="view_product_form_inherit" model="ir.ui.view">
+      <field name="name">res.partner.common.form.inherit</field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="base.view_partner_form"/>
+      <field name="arch" type="xml">
+        <field name="comment" position="after">
+          <div>
+            <label for="is_alumno" string="¿Es un alumno?"/>
+            <field name="is_alumno"/>
+          </div>
+          <div>
+            <label for="ediciones" string="Ediciones del alumno"/>
+            <field name="ediciones"/>
+          </div>
+        </field>
+      </field>
+    </record>
+  </data>
+</openerp>
