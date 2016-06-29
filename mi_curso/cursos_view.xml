@@ -7,7 +7,6 @@
 		<record model="ir.ui.view" id="curso_form">
 			<field name="name">res.curso.form</field>
 			<field name="model">res.curso</field>
-			<field name="type">form</field>
 			<field name="arch" type="xml">
 				<form string="Cursos">
 					<div>
@@ -25,7 +24,6 @@
 		<record model="ir.ui.view" id="curso_tree">
 			<field name="name">res.curso.tree</field>
 			<field name="model">res.curso</field>
-			<field name="type">tree</field>
 			<field name="arch" type="xml">
 				<tree string="Cursos">
 					<field name="nombre"/>
@@ -40,7 +38,7 @@
 			<field name="name">Cursos</field>
 			<field name="res_model">res.curso</field>
 			<field name="view_type">form</field>
-			<field name="view_mode">tree, form</field>
+			<field name="view_mode">tree,form</field>
 		</record>
 		<!-- FIN PARTE 2 -->
 
