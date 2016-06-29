@@ -5,7 +5,7 @@
     "category" : "Generic Modules/Others",
     "website" : "http://www.github.com/gomezportillo/odoo_practica",
     "description": "Módulo para la gestión de alumnos",
-    "depends" : ["base"],
+    "depends" : ["partner, product"],
     "update_xml" : ["alumno_view.xml"],
     "active": True,
     "installable": True
